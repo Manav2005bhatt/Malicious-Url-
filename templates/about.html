@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>About - SafeURL</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+    <nav class="navbar">
+        <div class="logo">🔒 SafeURL</div>
+        <div class="nav-links">
+            <a href="{{ url_for('home') }}">Home</a>
+            <a href="{{ url_for('about') }}">About</a>
+            <a href="{{ url_for('contact') }}">Contact</a>
+        </div>
+    </nav>
+
+    <section class="container">
+        <h2>About SafeURL</h2>
+        <p>SafeURL uses a machine learning model trained on real-world data to detect whether a given URL is safe or potentially malicious.</p>
+
+        <h3>🚨 Features:</h3>
+        <ul>
+            <li>Detect phishing links using ML</li>
+            <li>Custom URL feature extraction</li>
+            <li>Trained on real data</li>
+            <li>Instant results</li>
+        </ul>
+
+        <h3>🛠️ Built With:</h3>
+        <ul>
+            <li>Python, Flask</li>
+            <li>HTML, CSS</li>
+            <li>Scikit-learn, Pandas</li>
+        </ul>
+    </section>
+</body>
+</html>
