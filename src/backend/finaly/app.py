@@ -22,7 +22,12 @@ print(f"DEBUG: Calculated PROJECT_ROOT: {PROJECT_ROOT}")
 print(f"DEBUG: Calculated TEMPLATE_FOLDER: {TEMPLATE_FOLDER}")
 # --- END DEBUG PRINT STATEMENTS ---
 
-app = Flask(__name__, template_folder=TEMPLATE_FOLDER)
+STATIC_FOLDER = os.path.join(PROJECT_ROOT, 'frontend', 'static')
+
+app = Flask(__name__,
+            template_folder=TEMPLATE_FOLDER,
+            static_folder=STATIC_FOLDER,
+            static_url_path='/static') # This makes sure /static URL works
 
 # Get the directory of the current file (app.py)
 BASE_DIR = os.path.dirname(os.path.abspath(__file__))
