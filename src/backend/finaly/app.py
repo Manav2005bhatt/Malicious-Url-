@@ -4,6 +4,12 @@ import os
 import pandas as pd
 from .extract_features import extract_features
 
+# Get the base directory of the entire project (FINALY folder)
+PROJECT_ROOT = os.path.abspath(os.path.join(os.path.dirname(__file__), '..', '..', '..'))
+
+# Define the path to your templates folder
+TEMPLATE_FOLDER = os.path.join(PROJECT_ROOT, 'frontend', 'templates')
+
 app = Flask(__name__)
 
 # Get the directory of the current file (app.py)
