@@ -6,7 +6,7 @@ from .extract_features import extract_features
 app = Flask(__name__)
 
 # Load the trained model
-model = joblib.load('improved_url_model.pkl')
+model = joblib.load("rf_model.pkl") # if you're loading rf_model.pkl
 
 @app.route('/')
 def home():
