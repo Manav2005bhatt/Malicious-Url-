@@ -9,144 +9,176 @@ body {
     background: linear-gradient(135deg, #0f2027, #203a43, #2c5364);
     color: #fff;
     min-height: 100vh;
+    display: flex; /* Added for centering content */
+    flex-direction: column; /* Added for centering content */
+    align-items: center; /* Added for centering content */
+    justify-content: center; /* Added for centering content */
 }
 
 /* Navbar */
 .navbar {
-    background-color: rgba(255, 255, 255, 0.05);
-    padding: 1rem 2rem;
+    background-color: rgba(255, 255, 255, 0.08); /* Slightly more opaque */
+    padding: 1.2rem 2.5rem; /* Increased padding */
     display: flex;
     justify-content: space-between;
     align-items: center;
-    position: sticky;
+    position: fixed; /* Changed to fixed for better stickiness */
     top: 0;
+    left: 0;
+    width: 100%;
     z-index: 1000;
-    backdrop-filter: blur(8px);
-    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(12px); /* Increased blur */
+    border-bottom: 1px solid rgba(255, 255, 255, 0.15); /* Slightly stronger border */
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.4); /* Enhanced shadow */
 }
 
 .logo {
-    font-size: 1.6rem;
+    font-size: 1.8rem; /* Slightly larger */
     font-weight: bold;
     color: #00bfff;
-    text-shadow: 1px 1px 3px rgba(0, 191, 255, 0.5);
+    text-shadow: 0 0 8px rgba(0, 191, 255, 0.8), 0 0 15px rgba(0, 191, 255, 0.4); /* More vibrant shadow */
 }
 
 .nav-links a {
     color: #fff;
-    margin-left: 20px;
+    margin-left: 25px; /* Increased margin */
     text-decoration: none;
     font-weight: 500;
-    transition: color 0.3s ease;
+    transition: color 0.3s ease, text-shadow 0.3s ease; /* Added text-shadow transition */
 }
 
 .nav-links a:hover {
-    color: #00bfff;
+    color: #4ddbff; /* Lighter blue on hover */
+    text-shadow: 0 0 5px #4ddbff, 0 0 10px #4ddbff; /* Glow on hover */
 }
 
 /* Container Card */
 .container {
-    background: rgba(255, 255, 255, 0.05);
-    max-width: 500px;
-    margin: 5rem auto;
-    padding: 2.5rem 2rem;
-    border-radius: 20px;
-    box-shadow: 0 15px 40px rgba(0, 0, 0, 0.4);
+    background: rgba(255, 255, 255, 0.08); /* Slightly more opaque */
+    max-width: 650px; /* Made the box bigger */
+    margin: 5rem auto; /* Keep margin for spacing */
+    padding: 3rem 2.5rem; /* Increased padding */
+    border-radius: 25px; /* More rounded corners */
+    box-shadow: 0 20px 50px rgba(0, 0, 0, 0.6); /* Enhanced shadow */
     text-align: center;
-    backdrop-filter: blur(10px);
+    backdrop-filter: blur(15px); /* Increased blur */
+    border: 1px solid rgba(255, 255, 255, 0.1); /* Subtle border for definition */
 }
 
 /* Headings and Text */
 .container h2 {
-    font-size: 2rem;
-    margin-bottom: 1rem;
+    font-size: 2.5rem; /* Larger heading */
+    margin-bottom: 1.2rem;
     color: #00bfff;
-    text-shadow: 1px 1px 4px rgba(0, 191, 255, 0.3);
+    text-shadow: 0 0 8px rgba(0, 191, 255, 0.6), 0 0 15px rgba(0, 191, 255, 0.3); /* More vibrant shadow */
 }
 
 .container p {
-    font-size: 1rem;
-    margin-bottom: 2rem;
-    color: #ccc;
+    font-size: 1.1rem; /* Slightly larger text */
+    margin-bottom: 2.5rem; /* Increased margin */
+    color: #e0e0e0; /* Lighter grey for better contrast */
 }
 
 /* Input Field */
 input[type="text"] {
     width: 100%;
-    padding: 0.9rem;
+    padding: 1.1rem; /* Increased padding */
     border: none;
-    border-radius: 10px;
-    font-size: 1rem;
-    margin-bottom: 1.5rem;
+    border-radius: 12px; /* More rounded */
+    font-size: 1.1rem; /* Larger font */
+    margin-bottom: 1.8rem; /* Increased margin */
     outline: none;
-    background: rgba(255, 255, 255, 0.1);
+    background: rgba(255, 255, 255, 0.15); /* More opaque */
     color: #fff;
-    backdrop-filter: blur(6px);
-    box-shadow: inset 0 0 10px rgba(0, 0, 0, 0.2);
+    backdrop-filter: blur(8px); /* Increased blur */
+    box-shadow: inset 0 0 15px rgba(0, 0, 0, 0.3); /* Deeper inset shadow */
+    transition: all 0.3s ease; /* Smooth transition */
+}
+
+input[type="text"]:focus {
+    background: rgba(255, 255, 255, 0.25); /* Lighter on focus */
+    box-shadow: inset 0 0 15px rgba(0, 0, 0, 0.4), 0 0 15px rgba(0, 191, 255, 0.5); /* Glow on focus */
 }
 
 /* Button */
 button {
-    padding: 0.9rem 2rem;
+    padding: 1.1rem 2.5rem; /* Increased padding */
     border: none;
-    background: #00bfff;
+    background: linear-gradient(45deg, #00bfff, #0099cc); /* Gradient background */
     color: white;
-    font-size: 1rem;
-    border-radius: 12px;
+    font-size: 1.1rem; /* Larger font */
+    border-radius: 15px; /* More rounded */
     cursor: pointer;
-    transition: all 0.3s ease;
-    box-shadow: 0 4px 10px rgba(0, 191, 255, 0.4);
+    transition: all 0.4s ease; /* Smoother transition */
+    box-shadow: 0 6px 15px rgba(0, 191, 255, 0.5); /* Enhanced shadow */
+    font-weight: bold; /* Make text bolder */
+    letter-spacing: 0.5px; /* Slightly spaced letters */
 }
 
 button:hover {
-    background: #0099cc;
-    box-shadow: 0 6px 16px rgba(0, 191, 255, 0.6);
+    background: linear-gradient(45deg, #0099cc, #007bb3); /* Darker gradient on hover */
+    box-shadow: 0 8px 20px rgba(0, 191, 255, 0.8); /* Stronger shadow on hover */
+    transform: translateY(-2px); /* Slight lift effect */
 }
 
 /* Responsive Fix */
-@media screen and (max-width: 600px) {
+@media screen and (max-width: 768px) { /* Adjusted breakpoint for better mobile fit */
     .container {
         margin: 2rem 1rem;
         padding: 2rem 1rem;
+        max-width: 95%; /* Allow it to take more width on smaller screens */
     }
 
     .navbar {
         flex-direction: column;
         align-items: flex-start;
+        padding: 1rem 1.5rem; /* Adjusted padding for mobile navbar */
     }
 
     .nav-links {
-        margin-top: 0.5rem;
+        margin-top: 0.8rem;
+        width: 100%; /* Make nav links take full width */
+        display: flex;
+        justify-content: space-around; /* Distribute links evenly */
+    }
+    .nav-links a {
+        margin-left: 0; /* Remove left margin for better spacing */
+        margin-right: 10px; /* Add some right margin */
     }
 }
 
 /* Result Page Enhancements */
 .container p strong {
     color: #ffffff;
+    text-shadow: 0 0 5px rgba(255, 255, 255, 0.5); /* Added subtle shadow */
 }
 
 /* Prediction Text Styling */
 .container span {
     font-weight: bold;
-    font-size: 1.1rem;
+    font-size: 1.2rem; /* Slightly larger */
+    color: #00bfff; /* Ensure this is a vibrant color */
+    text-shadow: 0 0 5px rgba(0, 191, 255, 0.5); /* Added subtle shadow */
 }
 
 /* Back Button */
 .back-btn {
     display: inline-block;
-    margin-top: 1.5rem;
+    margin-top: 2rem; /* Increased margin */
     color: #00bfff;
     text-decoration: none;
     font-weight: bold;
-    font-size: 1rem;
-    border: 1px solid #00bfff;
-    padding: 0.5rem 1rem;
-    border-radius: 10px;
-    transition: background 0.3s ease, color 0.3s ease;
+    font-size: 1.1rem; /* Slightly larger */
+    border: 2px solid #00bfff; /* Thicker border */
+    padding: 0.7rem 1.5rem; /* Increased padding */
+    border-radius: 15px; /* More rounded */
+    transition: background 0.4s ease, color 0.4s ease, box-shadow 0.4s ease; /* Smoother transition */
+    box-shadow: 0 4px 10px rgba(0, 191, 255, 0.4); /* Added shadow */
 }
 
 .back-btn:hover {
     background: #00bfff;
-    color: #fff;
+    color: #0f2027; /* Darker text on hover for contrast */
+    box-shadow: 0 6px 16px rgba(0, 191, 255, 0.6); /* Stronger shadow on hover */
+    transform: translateY(-1px); /* Slight lift effect */
 }
-
