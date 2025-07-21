@@ -32,8 +32,7 @@ app = Flask(__name__,
 # Get the directory of the current file (app.py)
 BASE_DIR = os.path.dirname(os.path.abspath(__file__))
 
-# Load the trained model
-MODEL_PATH = os.path.join(BASE_DIR, "rf_model.pkl") # Use rf_model.pkl if that's your file
+MODEL_PATH = os.path.join(BASE_DIR, "improved_url_model.pkl")
 model = joblib.load(MODEL_PATH)
 
 @app.route('/')
