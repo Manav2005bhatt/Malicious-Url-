@@ -6,8 +6,12 @@ from .extract_features import extract_features
 
 app = Flask(__name__)
 
+# Get the directory of the current file (app.py)
+BASE_DIR = os.path.dirname(os.path.abspath(__file__))
+
 # Load the trained model
-model = joblib.load("rf_model.pkl") # if you're loading rf_model.pkl
+MODEL_PATH = os.path.join(BASE_DIR, "rf_model.pkl") # Use rf_model.pkl if that's your file
+model = joblib.load(MODEL_PATH)
 
 @app.route('/')
 def home():
