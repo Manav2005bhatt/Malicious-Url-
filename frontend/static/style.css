@@ -182,3 +182,25 @@ button:hover {
     box-shadow: 0 6px 16px rgba(0, 191, 255, 0.6); /* Stronger shadow on hover */
     transform: translateY(-1px); /* Slight lift effect */
 }
+
+/* Custom styles for the list items in About page */
+.about-list {
+    margin-top: 1.5rem; /* Increased gap between heading and list content */
+    margin-bottom: 2rem; /* Add some space below the list before the next heading */
+    text-align: left; /* Ensure text alignment is left for list items */
+    display: inline-block; /* To center the list itself within the container */
+}
+.about-list ul {
+    list-style: none; /* Remove default bullet points */
+    padding: 0;
+}
+.about-list li {
+    margin-bottom: 0.8rem; /* Increased spacing between list items */
+    color: #ccc;
+    display: flex;
+    align-items: center;
+}
+.about-list li svg {
+    margin-right: 0.8rem; /* Increased space between icon and text */
+    color: #00bfff;
+}
