@@ -10,6 +10,12 @@ PROJECT_ROOT = os.path.abspath(os.path.join(os.path.dirname(__file__), '..', '..
 # Define the path to your templates folder
 TEMPLATE_FOLDER = os.path.join(PROJECT_ROOT, 'frontend', 'templates')
 
+# --- DEBUG PRINT STATEMENTS ---
+print(f"DEBUG: app.py location: {os.path.abspath(__file__)}")
+print(f"DEBUG: Calculated PROJECT_ROOT: {PROJECT_ROOT}")
+print(f"DEBUG: Calculated TEMPLATE_FOLDER: {TEMPLATE_FOLDER}")
+# --- END DEBUG PRINT STATEMENTS ---
+
 app = Flask(__name__)
 
 # Get the directory of the current file (app.py)
