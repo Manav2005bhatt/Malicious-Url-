@@ -1,7 +1,7 @@
 from flask import Flask, render_template, request
 import joblib
 import pandas as pd
-from extract_features import extract_features
+from .extract_features import extract_features
 
 app = Flask(__name__)
 
