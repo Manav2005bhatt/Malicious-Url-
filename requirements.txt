@@ -4,7 +4,5 @@ numpy
 pandas
 scikit-learn
 joblib
-<<<<<<< HEAD
 gunicorn
-=======
->>>>>>> 1a5407edb64916020c9da812d3417d59a9dac225
+
